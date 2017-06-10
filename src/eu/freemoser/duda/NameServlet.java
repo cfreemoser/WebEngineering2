@@ -13,14 +13,14 @@ import java.io.PrintWriter;
  * Created by freim on 10.06.2017.
  */
 
-@WebServlet(urlPatterns = "/Home", loadOnStartup = -1)
+@WebServlet(urlPatterns = {"/Home", "/Start", "/LuL"}, loadOnStartup = 1)
 public class NameServlet extends HttpServlet {
 
 
     @Override
     public void init(ServletConfig config) throws ServletException {
         super.init(config);
-        System.out.println("Servlet started!");
+        System.out.println("Servlet started! " + this.hashCode());
     }
 
     @Override
