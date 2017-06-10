@@ -13,7 +13,7 @@ import java.io.PrintWriter;
  * Created by freim on 10.06.2017.
  */
 
-@WebServlet(urlPatterns = "/Home")
+@WebServlet(urlPatterns = "/Home", loadOnStartup = -1)
 public class NameServlet extends HttpServlet {
 
 

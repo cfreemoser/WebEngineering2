@@ -8,6 +8,7 @@
     <servlet>
         <servlet-name>NameServlet</servlet-name>
         <servlet-class>eu.freemoser.duda.NameServlet</servlet-class>
+        <load-on-startup>1</load-on-startup>
     </servlet>
 
     <!-- Second define the mapping -->
