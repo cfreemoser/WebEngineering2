@@ -1,5 +1,6 @@
 package eu.freemoser.duda;
 
+import javax.servlet.ServletConfig;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -12,9 +13,15 @@ import java.io.PrintWriter;
  * Created by freim on 10.06.2017.
  */
 
-@WebServlet(urlPatterns = "/*")
+@WebServlet(urlPatterns = "/Home")
 public class NameServlet extends HttpServlet {
 
+
+    @Override
+    public void init(ServletConfig config) throws ServletException {
+        super.init(config);
+        System.out.println("Servlet started!");
+    }
 
     @Override
     protected void service(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {

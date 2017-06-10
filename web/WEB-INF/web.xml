@@ -3,4 +3,16 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
          version="3.1">
+
+    <!-- First define the Servlet -->
+    <servlet>
+        <servlet-name>NameServlet</servlet-name>
+        <servlet-class>eu.freemoser.duda.NameServlet</servlet-class>
+    </servlet>
+
+    <!-- Second define the mapping -->
+    <servlet-mapping>
+        <servlet-name>NameServlet</servlet-name>
+        <url-pattern>/NameServlet</url-pattern>
+    </servlet-mapping>
 </web-app>
