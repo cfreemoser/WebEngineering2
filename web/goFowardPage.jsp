@@ -1,25 +1,23 @@
 <%--
   Created by IntelliJ IDEA.
   User: freim
-  Date: 10.06.2017
-  Time: 13:50
+  Date: 13.06.2017
+  Time: 18:03
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<%@ taglib prefix="core" uri="http://java.sun.com/jsp/jstl/core" %>
 <html>
 <head>
-    <title>ScopeTest</title>
+    <title>Forward Test</title>
 </head>
 <body>
+<!-- We can use this to access the right bean! -->
+<jsp:useBean id="requestCount" scope="request" class="eu.freemoser.beans.CountBean"/>
 <jsp:useBean id="sessionCount" type="eu.freemoser.beans.CountBean" class="eu.freemoser.beans.CountBean"
              scope="session"/>
 <jsp:useBean id="applicationCount" type="eu.freemoser.beans.CountBean" class="eu.freemoser.beans.CountBean"
              scope="application"/>
 <jsp:useBean id="pageCount" type="eu.freemoser.beans.CountBean" class="eu.freemoser.beans.CountBean" scope="page"/>
-<jsp:useBean id="requestCount" type="eu.freemoser.beans.CountBean" class="eu.freemoser.beans.CountBean"
-             scope="request"/>
-
 
 <h1>Load Ones</h1>
 <table>
@@ -159,10 +157,9 @@
              
         </tr>
     </td>
-</table>
 
-<h1>Forward Test!</h1>
-<p>Reloads this page but with a forward tag at the end! </p>
-<a href="goFowardPage.jsp">Click here for the test!</a>
+
+    <jsp:forward page="forwardPage.jsp"/>
+
 </body>
 </html>

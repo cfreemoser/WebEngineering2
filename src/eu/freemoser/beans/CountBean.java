@@ -13,10 +13,12 @@ public class CountBean {
 
 
     public int getCount() {
-        return count++;
+        count = count + 1;
+        return count;
     }
 
-    public void setCount(int count) {
-        this.count = count;
+    public String getHash() {
+        return String.valueOf(this.hashCode());
     }
+
 }
