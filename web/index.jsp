@@ -12,5 +12,6 @@
 </head>
 <body>
 $END$
+<jsp:forward page="list.jsp"/>
 </body>
 </html>
